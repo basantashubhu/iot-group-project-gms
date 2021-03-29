@@ -6,6 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".BinViewActivity">
 
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imgBackBtn"
+                android:src="@drawable/ic_back"
+                android:contentDescription="@string/back_button"
+                android:layout_width="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="24dp"/>
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="@dimen/titleTextSize"
+                android:text="@string/bin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        android:background="@color/bin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBin"
+                android:src="@drawable/ic_trash_empty"
+                app:tint="@color/primary"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+            <TextView
+                android:id="@+id/tvBinName"
+                android:text="@string/bin"
+                android:textSize="@dimen/titleTextSize"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/imgBin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
+            <TextView
+                android:id="@+id/tvBinDesc"
+                android:text="@string/bin"
+                android:textSize="@dimen/normalTextSize"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tvBinName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:id="@+id/tvBinState"
+                android:text="50%"
+                android:textSize="@dimen/normalTextSize"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tvBinDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnLocation"
+                android:text="@string/action_location"
+                android:fontFamily="@font/montserrat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="50dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBinState" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

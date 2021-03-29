@@ -61,6 +61,9 @@ class BinActivity : BaseActivity() {
         alert.setPositiveButton("Delete") { _,_->
             attemptBinDelete(bin)
         }
+        alert.setNegativeButton("Cancel") { _,_->
+
+        }
         alert.show()
     }
 

@@ -20,5 +20,13 @@ class BinViewActivity : AppCompatActivity() {
             finish()
 
         bin = intent.getSerializableExtra("bin") as Bin
+
+        handleBin()
+    }
+
+    private fun handleBin() {
+        binding.tvBinName.text = bin.name
+        binding.tvBinDesc.text = bin.desc
+        binding.tvBinState.text = "${bin.state?:0}%"
     }
 }

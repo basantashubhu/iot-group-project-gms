@@ -6,4 +6,5 @@ data class Bin(
     var uuid : String = "",
     val name : String = "",
     val desc : String = "",
+    val state : String = ""
 ) : Serializable

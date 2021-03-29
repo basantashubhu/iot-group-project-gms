@@ -53,4 +53,5 @@
     <string name="prompt_bin_desc">Description</string>
     <string name="action_add_bin">Add Bin</string>
     <string name="delete_button">delete button</string>
+    <string name="action_location">Location</string>
 </resources>
