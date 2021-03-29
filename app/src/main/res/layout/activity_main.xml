@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/toolbar"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:layout_marginLeft="24dp"
+                android:textSize="@dimen/titleTextSize"
+                android:textAllCaps="true"
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvWelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcometext"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="24dp"
+        android:textSize="@dimen/titleTextSize"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/tvDashboard"
+        android:text="@string/dashboard"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/headerTextSize"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tvCaption"
+        android:text="@string/dashboard_caption"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:background="@color/success"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/titleTextSize"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btnBrowseBin"
+        android:text="@string/action_browse_bin"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/info"
+        app:layout_constraintBottom_toTopOf="@id/btnProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:text="@string/action_profile"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="50dp"
+        android:backgroundTint="@color/info"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btnLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:text="@string/action_log_out"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingHorizontal="50dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

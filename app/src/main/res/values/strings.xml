@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">GMS</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="please_wait">Please wait</string>
+    <string name="smart_garbage_management_system">Smart Garbage Management System</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="forget_password_caption">Enter you email address we\'ll send you an email to reset your password</string>
+    <string name="action_request">Request</string>
+    <string name="welcometext">Welcome, your@email.com</string>
+    <string name="register">Register</string>
+    <string name="back_button">Back button</string>
+    <string name="action_register">Register</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="dashboard_caption">Let\'s Keep Our \nEnvironment Clean</string>
+    <string name="action_browse_bin">Browse Bin</string>
+    <string name="action_log_out">Logout</string>
+    <string name="action_profile">Profile</string>
+    <string name="profile">Profile</string>
+    <string name="action_update">Update</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="upload_image">upload image</string>
+    <string name="title_activity_bin">BinActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="bin">Bin</string>
+    <string name="add_bin">Add Bin</string>
+    <string name="prompt_bin_name">Bin Name</string>
+    <string name="prompt_bin_desc">Description</string>
+    <string name="action_add_bin">Add Bin</string>
+    <string name="delete_button">delete button</string>
+</resources>
