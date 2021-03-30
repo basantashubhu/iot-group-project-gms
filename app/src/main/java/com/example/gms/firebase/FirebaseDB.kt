@@ -10,6 +10,7 @@ import com.example.gms.models.Store
 import com.example.gms.models.User
 import com.example.gms.ui.login.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
@@ -17,6 +18,7 @@ import com.google.firebase.storage.StorageReference
 
 class FirebaseDB {
     private val mFireStore = FirebaseFirestore.getInstance()
+    private val mFirebaseDB = FirebaseDatabase.getInstance()
 
     fun registerUser(activity: RegisterActivity, user: User) {
         mFireStore.collection(Store.USERS)
@@ -94,5 +96,15 @@ class FirebaseDB {
             .addOnCompleteListener { task ->
                 activity.onBinDeleteComplete(task)
             }
+    }
+
+    fun fetchBinState(device: String, callback: (String) -> Unit) {
+        mFirebaseDB.getReference("/$device/level").get()
+                .addOnSuccessListener { data ->
+                    callback(data.value.toString())
+                }
+                .addOnFailureListener { fail ->
+                    Log.e("eeeeeeeeeee", fail.message.toString())
+                }
     }
 }
